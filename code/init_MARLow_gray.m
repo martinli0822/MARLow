@@ -1,6 +1,6 @@
-function res = init_MARLow(x, S, x0, sig, iter)
-par.win = 5;
-par.nblk = 75;    
+function res = init_MARLow_gray(x, S, x0, sig, iter)
+par.win = 8;
+par.nblk = 64;
 par.step = 4;
 par.K = iter;
 par.mask = S;
@@ -9,4 +9,5 @@ par.nSig = sig;
 % The original image is used only for computing PSNR and SSIM
 par.ori_im = x;
 
-res = MARLow(par);
+res = MARLow_gray(par);
+
